@@ -16,6 +16,7 @@ FROM node:18-alpine
 RUN apk add procps curl bash
 
 RUN apk add jdupes --repository=http://dl-cdn.alpinelinux.org/alpine/edge/testing/
+RUN apk add rclone
 
 COPY --from=builder /opt/cronicle/ /opt/cronicle/
 WORKDIR /opt/cronicle
